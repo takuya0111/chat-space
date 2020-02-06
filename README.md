@@ -37,7 +37,7 @@
 - has_many :user_chat_group
 - belongs_to :user
 
-## user_chat-groupテーブル
+## user_chat_groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
