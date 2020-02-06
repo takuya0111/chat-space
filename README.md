@@ -10,8 +10,7 @@
 
 ### Association
 - has_many :messages
-- has_many :user_chat_group
-- has_many :chat_group
+- has_many :user_groups
 
 ## messagesテーブル
 
@@ -20,13 +19,13 @@
 |body|text||
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
-|chat_group_id|integer|null: false, foreign_key: true|
+|groups_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
-- belongs_to :chat_group
+- belongs_to :groups
 
-## chat_groupテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -34,14 +33,13 @@
 
 ### Association
 - has_many :messages
-- has_many :user_chat_group
-- belongs_to :user
+- has_many :user_groups
 
-## user_chat_groupテーブル
+## user_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|chat_group_id|integer|null: false, foreign_key: true|
+|groups_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
