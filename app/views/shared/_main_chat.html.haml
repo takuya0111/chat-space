@@ -1,0 +1,34 @@
+.main_chat
+  .main_chat__group_info
+    .info_left
+      .info_left__group_name
+        test
+      .info_left__group_member
+        Member : masa
+    .info_right
+      = link_to "#", class: "right_box" do
+        .edit_btn 
+          Edit
+  .main_chat__message_list
+    .contents_item
+      .contents_item__name
+        masa
+      .contents_item__time
+        2019/11/20(wed) 17:43:01
+    .contents_text
+      おはよう
+    .contents_item
+      .contents_item__name
+        masa
+      .contents_item__time
+        2019/11/20(wed) 17:43:34
+    .contents_text
+      今日は夜から雨
+  .main_chat__message_form
+    %form.new_message
+      .input_box
+        %input{:type => "text", :class => "input_box__text", :placeholder => "type a message"}
+        %label{:class => "input_box__image"}
+          = icon('far', 'image')
+          %input{:type => "file", :class => "input_box__image__file"}
+      %input{:type => "submit", :class => "submit_btn", :value => "Send"}
